@@ -1,0 +1,594 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* color variables */
+:root {
+	--primary-color: #ff511a;
+	--secondary-color: #43ba7f;
+	--text-color: black;
+	--bg-color: white;
+	--link-color: #e36402;
+	--dark-bg-color: #181d30;
+}
+
+body {
+	background-color: var(--bg-color);
+	font-family: "Poppins", sans-serif;
+	color: var(--text-color);
+	overflow-x: hidden;
+}
+
+header {
+	background-color: gray;
+}
+
+/* navigation style */
+.main-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+}
+
+.nav-list {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-list li {
+	padding: 0 1rem;
+}
+
+.nav-list li a {
+	text-decoration: none;
+	color: var(--bg-color);
+	font-weight: 300;
+	font-size: 1rem;
+}
+
+.nav-list li a:hover {
+	color: var(--link-color);
+}
+
+.logo-image {
+	height: 6rem;
+	border-radius: 50%;
+}
+
+.hamburger {
+	display: none;
+}
+
+/* hero style */
+.hero {
+	background-image: url(../assets/images/hero-bg.jpg);
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	animation: slide-in 2s ease-out forwards;
+}
+
+@keyframes slide-in {
+	0% {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+
+	100% {
+		opacity: 100%;
+		transform: translateY(0);
+	}
+}
+
+.hero-text {
+	width: 50%;
+	color: var(--bg-color);
+	padding-top: 2rem;
+	padding-left: 1rem;
+}
+
+.hero-text h2 {
+	font-size: 3rem;
+	font-weight: 700;
+	line-height: 4rem;
+	margin-bottom: 2rem;
+}
+
+.hero-text h2 em {
+	color: var(--primary-color);
+}
+
+.divider {
+	background-color: var(--bg-color);
+	width: 5rem;
+	height: 0.3rem;
+	border-radius: 0.18rem;
+	margin-bottom: 2.5rem;
+}
+
+.hero-text p {
+	margin-right: 3.75rem;
+	margin-bottom: 3.125rem;
+}
+
+/* services section styles */
+.section_heading {
+	text-align: center;
+}
+
+.section_heading h4 {
+	color: var(--primary-color);
+	font-weight: 600;
+}
+
+.section_heading h2 {
+	font-weight: 600;
+}
+
+.service_card {
+	border-radius: 1rem;
+	padding: 2.5rem;
+	box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.1);
+	margin-top: 2rem;
+	width: 95%;
+}
+
+.service_card h4 {
+	font-size: 1.3rem;
+	font-weight: 600;
+	margin-bottom: 1.25rem;
+}
+
+.service_card p {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	color: var(--primary-color);
+}
+
+.service_card i {
+	transition: all 0.5s;
+	float: right;
+	font-size: 4rem;
+	color: var(--primary-color);
+	margin-bottom: 2rem;
+	margin-right: -8%;
+}
+
+.service_card i:hover {
+	margin-top: 1rem;
+}
+
+/* banner section */
+.banner {
+	background-image: url(../assets/images/banner-bg.jpg);
+	background-size: cover;
+	padding: 5rem 0;
+	margin-top: 2%;
+}
+
+.banner .buttons {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.banner h2 {
+	font-size: 2.25rem;
+	font-weight: 700;
+	color: var(--bg-color);
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.banner h2 em {
+	font-style: normal;
+	color: var(--secondary-color);
+}
+
+.banner h2 strong {
+	font-weight: 700;
+	color: var(--primary-color);
+}
+
+.btn a {
+	font-size: 1rem;
+	padding: 0.75rem 2rem;
+	border-radius: 10px;
+	transition: all 0.3s;
+	text-decoration: none;
+	text-wrap: nowrap;
+}
+
+.btn a:hover {
+	opacity: 0.9;
+	transform: scale(1.05);
+}
+
+.btn1 a {
+	color: var(--primary-color);
+	background-color: var(--bg-color);
+}
+
+.btn2 a {
+	color: var(--bg-color);
+	background-color: var(--primary-color);
+}
+
+/* about us section */
+
+.about_us {
+	margin-top: 3%;
+	text-align: center;
+}
+
+.course-list {
+	margin-top: 2rem;
+	list-style: none;
+	padding: 0;
+}
+
+.course-list li {
+	display: flex;
+	padding: 1rem;
+}
+
+.course-list li span {
+	flex: 1;
+	font-size: 0.9375rem;
+	color: var(--text-color);
+}
+
+.list-head span {
+	font-weight: 600;
+}
+
+.item-title {
+	color: var(--secondary-color) !important;
+	font-weight: 600 !important;
+}
+
+/* Learning plan section */
+.learning-plan {
+	background-image: url(../assets/images/plan-bg.png);
+	margin-top: 3%;
+	padding: 2%;
+	object-fit: cover;
+}
+
+.picture img {
+	width: 75%;
+	margin-top: -20%;
+}
+
+.learning-plan .section_heading h4 {
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+.learning-plan .section_heading h2 {
+	color: var(--bg-color);
+	font-weight: 600;
+	text-wrap: wrap;
+}
+
+.learning-plan-form {
+	margin-right: 10%;
+}
+
+.learning-plan-form label {
+	color: var(--bg-color);
+	margin-top: 1rem;
+}
+
+.learning-plan-form .form-control,
+.learning-plan-form select {
+	background-color: gray;
+	border: none;
+	color: var(--bg-color)
+}
+
+.name-email {
+	display: flex;
+	gap: 5%;
+}
+
+.name-email div {
+	flex: 1;
+}
+
+.learning-plan-form .btn {
+	background-color: var(--primary-color);
+	color: var(--bg-color);
+	margin-top: 1rem;
+}
+
+.learning-plan-form button:hover {
+	transform: scale(1.1);
+}
+
+/* testimonial section */
+.testimonials {
+	margin-top: 5%;
+}
+
+.testimonial-card {
+
+	margin-top: 5%;
+	border-radius: 15px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.testimonial-card i {
+	color: var(--bg-color);
+	font-size: 5vw;
+	background-color: var(--primary-color);
+	padding: 1vw;
+	border-radius: 20%;
+	margin: 1vw;
+}
+
+.testimonial-card p {
+	font-style: italic;
+	color: gray;
+	margin: 1vh;
+}
+
+.testimonial-card h4 {
+	margin: 1vw;
+	font-weight: 500;
+}
+
+.testimonial-card span {
+	color: var(--primary-color);
+	margin: 1vw;
+}
+
+.testimonial-card img {
+	margin: 20% 0;
+	width: 20vw;
+	height: 20vw;
+	object-fit: cover;
+	border-radius: 8%;
+}
+
+.carousel {
+	width: 90%;
+	left: 5%;
+}
+
+.carousel-control-prev {
+	left: -10%;
+}
+
+.carousel-control-next {
+	right: -10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	width: 50px;
+	height: 50px;
+}
+
+/* contact us section */
+.contact-us {
+	margin-top: 5%;
+}
+
+iframe {
+	margin: 2%;
+	height: 60vw;
+}
+
+.contact-cards {
+	position: relative;
+	display: flex;
+	top: -6rem;
+	gap: 2vw;
+	width: 95%;
+	margin: 0 4vw;
+}
+
+.contact-cards .card {
+	flex: 1;
+	text-align: center;
+	transition: all 0.5s;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.contact-cards i {
+	color: var(--secondary-color);
+	font-size: 2.5rem;
+	padding: 1rem;
+}
+
+.contact-cards h5 {
+	padding: 0.5rem;
+}
+
+.contact-cards a {
+	color: var(--secondary-color);
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.contact-cards .card:hover {
+	transform: translateY(-1rem);
+}
+
+.contact-cards a:hover {
+	color: var(--primary-color);
+}
+
+/* Enquiry form */
+.enquiry-form {
+	margin: 1vw 3vw;
+}
+
+.enquiry-form .form-control {
+	margin-top: 3%;
+	background-color: lightgray;
+}
+
+.enquiry-form label {
+	color: gray;
+}
+
+.enquiry-form .form-floating:focus-within label{
+	color: var(--link-color);
+}
+
+.enquiry-form .btn {
+	background-color: var(--primary-color);
+	color: var(--bg-color);
+	font-size: 1rem;
+}
+
+.enquiry-form button:hover {
+	transform: scale(1.1);
+}
+
+/* footer */
+footer {
+	background-color: var(--dark-bg-color);
+	color: var(--bg-color);
+	text-align: center;
+	font-weight: 300;
+}
+
+footer div {
+	padding: 1vw;
+	padding-bottom: 3vw;
+}
+
+footer p {
+	margin: 0;
+	padding: 0.3rem;
+}
+
+footer span {
+	color: var(--primary-color);
+}
+@media (max-width: 990px) {
+
+	/* hero section styles */
+	.hero {
+		padding: 4rem;
+	}
+
+	.hero-text {
+		width: 90%;
+		text-align: center;
+	}
+
+	.hero-text h2 {
+		font-size: 2rem;
+		line-height: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.divider {
+		margin: 1rem auto;
+	}
+
+	.hero-text p {
+		margin-right: 0;
+		margin-bottom: 1.5rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.logo-image {
+		height: 4rem;
+	}
+
+	/* navigation style */
+	.nav-list li a {
+		font-size: 0.8rem;
+		white-space: nowrap;
+	}
+
+	.divider {
+		width: 12rem;
+	}
+
+	/* service section style */
+	.service_card {
+		width: 100%;
+		height: auto;
+		padding: 0.5rem;
+	}
+
+	.service_card i {
+		float: none;
+		margin-right: 0;
+		margin-bottom: 1rem;
+	}
+}
+
+@media (max-width: 576px) {
+
+	/* navigation style */
+	.nav-list {
+		display: none;
+	}
+
+	.hamburger {
+		display: block;
+		margin-left: auto;
+		margin-right: 1rem;
+		margin-top: 1rem;
+	}
+
+	.divider,
+	.hero-text p {
+		display: none;
+	}
+
+	/* about us */
+	.course-list li {
+		flex-direction: column;
+	}
+
+	/* learning plan */
+	.picture img {
+		display: none;
+	}
+
+	.name-email {
+		flex-direction: column;
+	}
+
+	.learning-plan-form {
+		margin: 0;
+	}
+
+	.testimonial-card i {
+		position: relative;
+		top: -2.5rem;
+		font-size: 2rem;
+
+	}
+
+	.testimonial-card img {
+		position: relative;
+		top: -2.5rem;
+		right: -3rem;
+		font-size: 2rem;
+		height: 4rem;
+		width: 4rem;
+	}
+
+	/* testimonial section */
+	.carousel-control-prev,
+	.carousel-control-next {
+		display: none;
+	}
+
+	/* contact section */
+	.contact-cards {
+		flex-direction: column;
+		position: static;
+	}
+}
