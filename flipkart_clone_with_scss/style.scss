@@ -1,0 +1,125 @@
+// variables
+
+$primary-bg-color: #ffffff;
+$primary-color: #fff;
+$search-bg-color: #f0f5ff;
+$search-btn-bg-color: #ff9f00;
+$header-nav-bg-color: #2a55e5;
+$banner-border-color: #e0e0e0;
+$footer-bg-color: #212121;
+$footer-color: #5f6d6d;
+$footer-head-color: #7a8787;
+$font-family: Arial, sans-serif;
+$bg-color :#f1f2f4;
+
+// mixins
+@mixin grid-layout($col, $size) {
+  display: grid;
+  grid-template-columns: repeat($col, $size);
+}
+
+@mixin center-content {
+  justify-content: center;
+  place-content: center;
+  place-items: center;
+}
+
+@mixin button-styles($bg-color, $color) {
+  padding: 0.625rem 1.125rem;
+  background-color: $bg-color;
+  color: $color;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+// partials
+
+@import "partials/header";
+@import "partials/footer";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  background-color: $bg-color;
+}
+
+.item-list {
+  @include grid-layout(9, 1fr);
+  background-color: $primary-bg-color;
+  @include center-content;
+  margin: 0 auto;
+  width: 76.25rem;
+  gap: 0.3125rem;
+  height: 7.1875rem;
+}
+
+.items {
+  margin-top: 0.625rem;
+  display: grid;
+  align-items: center;
+}
+
+.breaker {
+  margin-top: 1.25rem;
+}
+
+a {
+  width: 0.625rem;
+  height: 1.25rem;
+}
+
+.mid-banner {
+  @include grid-layout(3, auto);
+  gap: 0.625rem;
+  justify-content: center;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.logo {
+  width: 25rem;
+}
+
+.discount-banner {
+  margin-left: 1.4rem;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.lower-banner {
+  @include grid-layout(6, 1fr);
+  margin: 0 auto;
+  place-content: center;
+  place-items: center;
+  width: 76.25rem;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  background-color: $primary-bg-color;
+  height: 21.875rem;
+
+  &-heading {
+    grid-column-start: 1;
+    grid-column-end: 7;
+  }
+
+  &-ad {
+    border: 0 solid $banner-border-color;
+    padding: 0.625rem;
+    border-width: 1px;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    width: 11.25rem;
+    height: 13.75rem;
+
+    img {
+      width: 10rem;
+      height: 11.25rem;
+    }
+  }
+}
