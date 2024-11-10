@@ -1,0 +1,63 @@
+  header {
+    background-color: $primary-bg-color;
+    color: $primary-color;
+    padding: 0.5rem 0;
+  }
+
+  .header {
+    &_logo img {
+      max-width: 25%;
+      margin-left: 10%;
+      margin-top: 2%;
+    }
+
+    &_wrapper {
+      @include grid-layout(3, 1fr);
+      justify-content: space-evenly;
+      align-items: center;
+      max-width: 75rem;
+      margin: 0 auto;
+      padding: 0.125rem;
+    }
+
+    &_search {
+      input {
+        padding: 0.5rem;
+        border: none;
+        border-radius: 0.25rem;
+        color: $search-bg-color;
+      }
+
+      botton {
+        @include button-styles($search-btn-bg-color, $primary-color);
+      }
+    }
+
+    &_nav {
+      ul {
+        li button {
+          @include button-styles($header-nav-bg-color, $primary-color);
+        }
+
+        @include grid-layout(2, 6.25rem);
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        place-items: center;
+        place-content: center;
+      }
+
+      li {
+        margin-right: 1.25rem;
+      }
+    }
+  }
+
+  .search {
+    background-color: #f0f5ff;
+    border: none;
+  }
+
+  input:focus {
+    outline: none;
+  }
