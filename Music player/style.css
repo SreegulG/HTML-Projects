@@ -1,0 +1,162 @@
+/* defining colors */
+:root {
+  --background-color: #6ecaff;
+  --list-color: #1c9be0;
+  --playlist-color: #9451e1;
+  --font-color: #000000;
+  --primary-background-color: #ffffff;
+  --filter-color: #3f769f;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: var(--primary-background-color);
+  color: var(--font-color);
+}
+
+h1,
+.col-form-label,
+main h3 {
+  color: var(--font-color);
+}
+
+header {
+  width: 100%;
+  color: var(--font-color);
+}
+
+h1 {
+  padding-top: 2rem;
+}
+
+
+header .toggle-switch .form-check-input {
+  height: 3vw;
+  width: 100%;
+  padding-left: 40%;
+}
+
+
+.form-check-input::before {
+  content: "Dark";
+}
+
+.form-check-input:checked::before {
+  content: "Light";
+}
+
+.song-div,
+.card-div,
+.playlists {
+  background-color: var(--background-color);
+  margin: 1%;
+  padding: 2%;
+  border-radius: 3%;
+  box-shadow: 1px 1px 10px 1px black;
+}
+
+.playlists {
+  height: 88.5%;
+}
+
+.song-div form {
+  margin: 2%;
+  margin-right: 20%;
+  border: none;
+}
+
+
+.song-div form select {
+  width: 75%;
+  height: 3vw;
+  background-color: var(--filter-color);
+  border: none;
+}
+
+#search-song {
+  width: 86%;
+  margin: 5%;
+  margin-left: 0;
+}
+
+h3 {
+  margin: 3%;
+  padding-bottom: 5%;
+}
+
+.song-list {
+  margin: 1%;
+  padding: 0;
+  margin-right: 35%;
+}
+
+.song-list li button,
+.playlist-btn,
+.playlist-song-btn {
+  border: none;
+  margin: 5% 5% 0 0;
+  padding: 3%;
+  background-color: var(--list-color);
+  border-radius: 5px;
+  color: white;
+  font-weight: 400;
+  text-align: left;
+  width: 100%;
+}
+
+.song-list li button:hover,
+.playlist-btn:hover,
+.playlist-song-btn:hover {
+  background-color: var(--background-color);
+}
+
+.card-img-top {
+  padding: 5%;
+}
+
+.card-div .card {
+  background-color: var(--list-color);
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px 1px black;
+  margin-bottom: 10%;
+}
+
+.prev-btn,
+.next-btn,
+.add-to-playlist,
+.remove-from-playlist {
+  background-color: var(--playlist-color);
+  border: none;
+  width: 25%;
+  border-radius: 5px;
+  color: white;
+  padding: 1%;
+  margin: 3%;
+}
+
+.remove-from-playlist {
+  display: none;
+}
+
+#create-playlist {
+  background-color: var(--playlist-color);
+}
+
+#playlist-name {
+  border: 2px solid var(--font-color);
+  border-radius: 0;
+}
+
+
+#all-playlist-list,
+#current-list {
+  margin-right: 20%;
+}
+
+#search-playlist {
+  margin-bottom: 2%;
+  border: 2px solid var(--font-color);
+  border-radius: 0;
+}
